@@ -1,4 +1,4 @@
-Big Data School Costa Rica 2018
+## Big Data School Costa Rica 2018
 
 The Costa Rica National Research and Education Network: RedCONARE and the Costa Rica National High Technology Center (CeNAT) are proud to host the second Costa Rica Big Data School.
 
