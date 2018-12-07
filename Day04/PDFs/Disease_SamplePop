@@ -1,0 +1,9 @@
+import random as rnd
+my_population = Population(10)
+day_count = 0
+while (my_population.number_of_sick() > 0):
+    day_count = day_count+1
+    my_population.update()
+    print("Number sick:" + str(my_population.number_of_sick()))
+
+print("Total days of disease propogation: " + str(day_count))

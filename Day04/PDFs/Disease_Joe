@@ -1,0 +1,11 @@
+import random as rnd
+joe = Person()
+while (not joe.is_inoculated):
+    joe.update()
+    print ("Joe is " + joe.current_status, end="")
+    if (joe.is_infected):
+        print (" " + str(joe.days_sick) + " to go", end="")
+    print()
+    bad_luck = rnd.random()
+    if (bad_luck > .90 and not joe.is_inoculated):
+        joe.infect(5)

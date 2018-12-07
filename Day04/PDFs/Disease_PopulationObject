@@ -1,0 +1,31 @@
+class Population(object):
+    import random as rnd
+    def __init__(self, number):
+        self.People = []
+        bad_luck = self.rnd.randint(0,number-1)
+        for i in range(0,number):
+            p = Person()
+            self.People.append(p)
+            
+        self.People[bad_luck].infect(5)
+        
+    def number_of_sick(self):
+        sick_count = 0
+        for p in self.People:
+            if (p.is_infected):
+                sick_count = sick_count+1
+        
+        return sick_count
+    def update(self):
+        for p in self.People:
+            p.update()
+            bad_luck = self.rnd.random()
+            ## the following if statement will be replaced with the interact() method
+            if (bad_luck > .9 and not p.is_inoculated and not p.is_infected):
+                p.infect(5)
+
+
+    def interact(self):
+        ## Your Population will interact with 10 random Persons
+        ## if your Person interacts with a sick person, and they are not innoculated, they 
+        ## can get sick

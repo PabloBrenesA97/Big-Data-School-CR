@@ -1,0 +1,24 @@
+class Person(object):
+    def __init__(self):
+        self.current_status = "well"
+        self.days_sick = 0
+        self.is_inoculated = False
+        self.is_stable = True
+        self.is_infected = False
+    def infect(self, days):
+        self.days_sick = days
+        self.is_infected = True
+        if (self.is_inoculated):
+            self.is_infected = False
+            self.days_sick = 0
+    def update(self):
+        if (self.current_status == "well" and self.is_infected == True):
+            self.current_status = "sick"
+            self.is_stable = False
+        elif (self.current_status == "sick"):
+            self.days_sick = self.days_sick-1
+            if (self.days_sick == 0):
+                self.current_status = "recovered"
+                self.is_inoculated = True
+                self.is_stable = True
+                self.is_infected = False
